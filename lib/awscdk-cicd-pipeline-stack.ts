@@ -9,7 +9,7 @@ export class AwscdkCicdPipelineStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    new CodePipeline(this 'Pipeline', {
+    new CodePipeline(this, 'Pipeline', {
       pipelineName: 'TestPipeline',
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.gitHub('Falenyoni/awscdk-cicd-pipeline', 'main'), //
